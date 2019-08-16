@@ -1,0 +1,13 @@
+com\honstat\spring\model\GetUserInfo.class
+com\honstat\spring\service\impl\HomeService.class
+com\honstat\spring\annotaiton\JCRequestParam.class
+com\honstat\spring\annotaiton\JCRequestMapping.class
+com\honstat\spring\service\impl\StudentService.class
+com\honstat\spring\annotaiton\JCAutoWrited.class
+com\honstat\spring\service\IStudentService.class
+com\honstat\spring\controller\HomeController.class
+com\honstat\spring\annotaiton\JCComponent.class
+com\honstat\spring\service\IHomeService.class
+com\honstat\spring\annotaiton\JCController.class
+com\honstat\spring\annotaiton\JCService.class
+com\honstat\spring\service\CJDispatchServlet.class
