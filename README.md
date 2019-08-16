@@ -4,9 +4,10 @@
 本项目根据咕咆学院tom老师的视频学习而来。
 
 本项目依赖：
-    javax.servlet-api.jar
+
+      javax.servlet-api.jar
     
-    fastjson.jar
+      fastjson.jar
 
 重点事项：
 
@@ -20,13 +21,16 @@
  
  设置如下：
  
-   setting->java Compiler -> Additional command line parameters: -parameters
+    setting->java Compiler -> Additional command line parameters: -parameters
  
-   把值设为-parameters
+    把值设为-parameters
  
-   并且保证项目jdk版本使用1.8
+    并且保证项目jdk版本使用1.8
  
-   Target bytecode verison 设为1.8
+    Target bytecode verison 设为1.8
+    
+    另外：改完代码需要buildProject 步骤：Build-->BuildProject
+    给个设置教程地址：https://blog.csdn.net/baidu_32492845/article/details/79712141
  
  参数绑定实现功能支持以下组合：
  
@@ -54,21 +58,21 @@ HomeController中提供了多种测试样本接口，可以检验
 
 本项目实现spring核心功能有：
 
-  spring ioc容器
+    spring ioc容器
 
-  依赖自动注入
+    依赖自动注入
 
-  请求路由
+    请求路由
   
-  参数绑定
+    参数绑定
 
 使用到的技术：
 
-  注解
+    注解
 
-  反射
+    反射
 
-  配置文件获取
+    配置文件获取
 
 加载实现步骤：
 
@@ -100,3 +104,9 @@ url请求步骤：
     5.反射调用方法
 
     6.输出返回结果
+
+请求参数：
+
+     http://localhost:8080/home/getRequestBody
+     
+       {"id":111,"no":"weimob001","userInfo":{"name":"小提莫","age":20}}
