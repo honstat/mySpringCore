@@ -9,7 +9,7 @@
          version="2.5">
 <servlet>
     <servlet-name>cjservletMVC</servlet-name>
-    <servlet-class >com.honstat.spring.service.CJDispatchServlet</servlet-class>
+    <servlet-class >com.honstat.spring.service.CJDispatcherServlet</servlet-class>
     <init-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>spring/application.properties</param-value>
