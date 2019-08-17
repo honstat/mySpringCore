@@ -7,15 +7,15 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 
          version="2.5">
-<servlet>
-    <servlet-name>cjservletMVC</servlet-name>
-    <servlet-class >com.honstat.spring.service.CJDispatcherServlet</servlet-class>
-    <init-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>spring/application.properties</param-value>
-    </init-param>
-    <load-on-startup>1</load-on-startup>
-</servlet>
+    <servlet>
+        <servlet-name>cjservletMVC</servlet-name>
+        <servlet-class>com.honstat.spring.service.impl.CJDispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>spring/application.properties</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
     <servlet-mapping>
         <servlet-name>cjservletMVC</servlet-name>
         <url-pattern>/*</url-pattern>

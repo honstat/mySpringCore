@@ -1,4 +1,4 @@
-package com.honstat.spring.service;
+package com.honstat.spring.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.honstat.spring.annotaiton.JCAutoWrited;
@@ -37,18 +37,17 @@ public class CJDispatcherServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         try {
             doDispatcherServlet(req, resp);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
+
     }
 
     @Override
     public void init(ServletConfig config) {
-
         //加载配置
         String contextConfigLocation = config.getInitParameter("contextConfigLocation");
 
@@ -58,12 +57,12 @@ public class CJDispatcherServlet extends HttpServlet {
 
         //扫描要加载的类
         doScanner(dirpath);
-        //实例化要加载的类
 
+        //实例化要加载的类
         doInstance();
 
         //加载依赖注入，给属性赋值
-        doAutoWirted();
+        doAutoWrited();
 
         //加载映射地址
         doRequestMapping();
@@ -222,7 +221,7 @@ public class CJDispatcherServlet extends HttpServlet {
         }
     }
 
-    void doAutoWirted() {
+    void doAutoWrited() {
         for (Map.Entry<String, Object> obj : ioc.entrySet()) {
             try {
                 for (Field field : obj.getValue().getClass().getDeclaredFields()) {
